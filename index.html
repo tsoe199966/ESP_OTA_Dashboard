@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
    <head>
-      <title>ESP Firmware Flasher</title>
+      <title>Firmware Flasher</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <style>
          /* Add the CSS code here */
@@ -411,20 +411,20 @@
       </div>
       <!-- Action buttons for non-smartphone view -->
       <div class="action-buttons">
-         <label class="action-button flush-btn" onclick="promptPasswordAndFlushAll()">Flush All Devices</label>
-         <label class="action-button show-all-btn" onclick="toggleRegisteredDevices()">Show All Devices</label>
+         <label class="action-button flush-btn" onclick="promptPasswordAndFlushAll()">Flush All</label>
+         <label class="action-button show-all-btn" onclick="toggleRegisteredDevices()">Show All</label>
          <label class="action-button logout-btn" onclick="logout()">Logout</label>
       </div>
       <div class="container">
          <section class="left-container">
             <div id="notification" style="display: none;"></div>
-            <h1>ESP Firmware Flasher</h1>
+            <h1>Firmware Flasher</h1>
             <label for="firmware">Select Firmware:</label>
-            <label class="upload-btn" for="firmware">Upload Firmware</label>
+            <label class="upload-btn" for="firmware">Upload</label>
             <input type="file" id="firmware" name="firmwareFile" accept=".bin"><br>
-            <label for="espList">Select ESP:</label>
+            <label for="espList">Select:</label>
             <select id="espList" onchange="fetchFirmwareVersion()">
-               <option value="">Select an ESP</option>
+               <option value="">Select one</option>
             </select>
             <br>
             <label id="firmwareVersion">Firmware Version: N/A</label><br>
