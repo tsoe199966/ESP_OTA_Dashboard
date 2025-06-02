@@ -100,11 +100,6 @@ app.get('/getWebSocketAddress', (req, res) => {
 	res.json(wsAddress);
 });
 
-// When the page is started, time will start updating.
-window.onload = function() {
-	updateTime();
-}
-
 // Function to get the server's IP address
 function getServerIpAddress() {
 	const networkInterfaces = os.networkInterfaces();
