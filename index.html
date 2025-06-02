@@ -418,6 +418,7 @@
       <div class="container">
          <section class="left-container">
             <div id="notification" style="display: none;"></div>
+            <div><input type="text" id="ctime" readonly></div>
             <h1>Firmware Flasher</h1>
             <label for="firmware">Select Firmware:</label>
             <label class="upload-btn" for="firmware">Upload</label>
@@ -475,6 +476,14 @@
       <script>
          const flashMessageContainer = document.getElementById('flashMessageContainer');
                   // JavaScript function to toggle the hamburger menu and action buttons in smartphone mode
+         function updateTime() {
+            var date = new Date();
+            var time = date.toLocaleTimeString();
+
+            document.getElementById('ctime').value = time;
+            requestAnimationFrame(updateTime);
+         }
+
          function toggleActionButtons() {
          const hamburgerMenu = document.querySelector('.hamburger-menu');
          const actionButtons = document.querySelector('.action-buttons');
