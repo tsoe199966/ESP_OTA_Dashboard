@@ -418,7 +418,6 @@
       <div class="container">
          <section class="left-container">
             <div id="notification" style="display: none;"></div>
-            <div><input type="text" id="c-time" readonly></div>
             <h1>Firmware Flasher</h1>
             <label for="firmware">Select Firmware:</label>
             <label class="upload-btn" for="firmware">Upload</label>
@@ -438,6 +437,9 @@
                <p>Total Registered Devices: <span id="totalDevicesCount">0</span></p>
                <p>Online Devices: <span id="onlineDevicesCount">0</span></p>
                <p>Offline Devices: <span id="offlineDevicesCount">0</span></p>
+            </div>
+            <div>
+               <p id="c-time"></p>
             </div>
             <div id="deviceList">
                <!-- Device status and firmware version will be dynamically added here -->
@@ -474,6 +476,8 @@
          <p id="serverVersion">Server Version: Loading...</p>
       </div>
       <script>
+         var d = new Date();
+         
          const flashMessageContainer = document.getElementById('flashMessageContainer');
 
          // JavaScript function to toggle the hamburger menu and action buttons in smartphone mode
@@ -481,6 +485,16 @@
          const hamburgerMenu = document.querySelector('.hamburger-menu');
          const actionButtons = document.querySelector('.action-buttons');
          const overlay = document.querySelector('.overlay'); // Add this line to select the overlay element
+
+         // Function to display current date time
+         function updateDateTime() {
+            const now = new Date();
+            const formatted = now.toLocaleString();
+            document.getElementById('c-time').textContent = formatted;
+         }
+         
+         updateDateTime();
+         setInterval(updateDateTime, 2000);
          
          hamburgerMenu.classList.toggle('open');
          actionButtons.classList.toggle('open');
