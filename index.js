@@ -105,15 +105,6 @@ window.onload = function() {
 	updateTime();
 }
 
-// Function to get the current time and date.
-function updateTime() {
-	var date = new Date();
-	var time = date.toLocaleTimeString();
-
-	document.getElementById('c-time').value = time;
-	requestAnimationFrame(updateTime);
-}
-
 // Function to get the server's IP address
 function getServerIpAddress() {
 	const networkInterfaces = os.networkInterfaces();
